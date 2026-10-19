@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AEON 60P — The Timeless Automatic Chronograph</title>
+
+    <meta property="og:title" content="AEON 60P — The Timeless Automatic Chronograph" />
+    <meta property="og:description" content="A masterwork of contemporary Swiss-French haute horlogerie. 60mm automatic chronograph calibre with openworked mechanical architecture." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AEON 60P — The Timeless Automatic Chronograph" />
+    <meta name="twitter:description" content="A masterwork of contemporary Swiss-French haute horlogerie." />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='none' stroke='%23000' stroke-width='6'/><circle cx='50' cy='50' r='10' fill='%23000'/><line x1='50' y1='50' x2='50' y2='20' stroke='%23000' stroke-width='6'/><line x1='50' y1='50' x2='75' y2='50' stroke='%23000' stroke-width='4'/></svg>" />
+    <script type="module" crossorigin src="/aeon-60p-watch/assets/index-B20ufnTy.js"></script>
+    <link rel="stylesheet" crossorigin href="/aeon-60p-watch/assets/index-BQ2r3GSL.css">
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div id="loader">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 700 700">
+        <path
+          stroke-opacity="0.2"
+          stroke="#000"
+          stroke-width="1.5"
+          d="M350 695c190.538 0 345-154.462 345-345S540.538 5 350 5 5 159.462 5 350s154.462 345 345 345Z"
+        />
+        <path
+          class="progress-arc"
+          stroke-opacity="1"
+          stroke-width="3"
+          stroke="#000"
+          d="M350 695c190.538 0 345-154.462 345-345S540.538 5 350 5 5 159.462 5 350s154.462 345 345 345Z"
+        />
+      </svg>
+      <div><span>Now</span> Loading Calibre</div>
+    </div>
+
+    <!-- WEBGL CANVAS WRAPPER -->
+    <div id="canvas-wrapper"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor">
+      <div id="cursor-dot"></div>
+      <div id="cursor-ring"></div>
+      <div id="cursor-text"></div>
+    </div>
+
+    <!-- FIXED HEADER -->
+    <header id="header">
+      <div class="header-left">
+        <span class="brand-monogram">AEON 60P</span>
+        <span class="brand-badge">CALIBRE 60-P / 60MM</span>
+      </div>
+
+      <div class="header-center">
+        HAUTE HORLOGERIE SUISSE · BESPOKE EDITION
+      </div>
+
+      <div class="header-right">
+        <button id="sound-btn" class="sound-toggle-btn" data-cursor="swap" title="Toggle Sound">
+          <span>SOUND</span>
+          <div class="sound-bars">
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+          </div>
+        </button>
+
+        <button id="explode-btn" class="explode-btn" data-cursor="hold">
+          EXPLODE 3D
+        </button>
+
+        <button id="lang-btn" class="lang-btn" data-cursor="swap">
+          EN / FR
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN APP STRUCTURE -->
+    <main id="the-watch">
+
+      <!-- ================= SECTION 1: INTRO ================= -->
+      <section data-section="Intro">
+        <!-- Technical CAD Presentation Circle -->
+        <svg class="presentation-circle" viewBox="0 0 1074 810" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="537" cy="405" r="350" stroke="currentColor" stroke-opacity="0.15" stroke-dasharray="2 4"/>
+          <circle cx="537" cy="405" r="300" stroke="currentColor" stroke-opacity="0.1"/>
+          <line x1="537" y1="1" x2="537" y2="809" stroke="currentColor" stroke-opacity="0.1" />
+          <line x1="1" y1="405" x2="1073" y2="405" stroke="currentColor" stroke-opacity="0.1" />
+          <line x1="119" y1="822" x2="955" y2="-13" stroke="currentColor" stroke-opacity="0.08" stroke-dasharray="4 8" />
+          <line x1="120" y1="-12" x2="954" y2="822" stroke="currentColor" stroke-opacity="0.08" stroke-dasharray="4 8" />
+        </svg>
+
+        <div class="content-wrapper">
+          <!-- Animated Radial Segment Circle SVG -->
+          <div class="circle-svg-w" data-cursor="swap">
+            <svg class="circle-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 700 700">
+              <path class="outer-circle" stroke-opacity="0.12" stroke="currentColor" stroke-width="1.5" d="M350 695c190.538 0 345-154.462 345-345S540.538 5 350 5 5 159.462 5 350s154.462 345 345 345Z" />
+              <!-- 4 Quadrants for 4 colors -->
+              <path data-config="first" stroke="currentColor" stroke-width="1" stroke-opacity="0.4" d="M350 350 L350 5 A345 345 0 0 1 695 350 Z" fill="rgba(0,0,0,0.02)" />
+              <path data-config="second" stroke="currentColor" stroke-width="1" stroke-opacity="0.4" d="M350 350 L695 350 A345 345 0 0 1 350 695 Z" fill="rgba(0,0,0,0.02)" />
+              <path data-config="third" stroke="currentColor" stroke-width="1" stroke-opacity="0.4" d="M350 350 L350 695 A345 345 0 0 1 5 350 Z" fill="rgba(0,0,0,0.02)" />
+              <path data-config="fourth" stroke="currentColor" stroke-width="1" stroke-opacity="0.4" d="M350 350 L5 350 A345 345 0 0 1 350 5 Z" fill="rgba(0,0,0,0.02)" />
+            </svg>
+          </div>
+
+          <h1 class="fps-watch-title">
+            <span class="char-wrapper">AE</span>
+            <span class="char-wrapper">ON</span>
+            <span class="char-wrapper">60P</span>
+          </h1>
+        </div>
+
+        <div class="fps-bottom-wrapper">
+          <div class="fps-color-wrapper" data-fade>
+            <p class="fps-label">FINISH / MATERIAL</p>
+            <div class="color-options">
+              <button class="color-opt-btn active" data-config="first" data-cursor="swap">01 · Silver Steel</button>
+              <button class="color-opt-btn" data-config="second" data-cursor="swap">02 · Deep Black DLC</button>
+              <button class="color-opt-btn" data-config="third" data-cursor="swap">03 · 18K Pure Gold</button>
+              <button class="color-opt-btn" data-config="fourth" data-cursor="swap">04 · 18K Rose Gold</button>
+            </div>
+          </div>
+
+          <div class="fps-watch-weight-wrapper" data-fade>
+            <p class="caption">CALIBRE SPECIFICATION</p>
+            <p class="fps-watch-weight-text">MODEL 146GR · 60MM</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: TIMELESS ================= -->
+      <section data-section="Timeless" class="big-text-section">
+        <div class="fps-timeless-content">
+          the<br /><br>timeless<br /><br>automatic<br /><br>60mm<br /><br>watch
+        </div>
+
+        <div class="fps-timeless-wrapper" data-fade>
+          <p class="fps-watch-title grey-line">AEON 60P</p>
+        </div>
+
+        <div class="fps-timeless-informations-wrapper" data-fade>
+          <div>
+            <p class="caption" id="timeless-first-label">Chronograph Calibre</p>
+            <h3 class="small-title">Architectural Purity</h3>
+            <p class="body-text" id="timeless-first-text">
+              A contemporary interpretation of the haute horlogerie chronograph, combining nanometer precision engineering with architectural purity. Designed to measure fleeting moments with absolute clarity.
+            </p>
+          </div>
+
+          <div>
+            <p class="caption" id="timeless-second-label">Automatic Movement</p>
+            <h3 class="small-title">Continuous Power</h3>
+            <p class="body-text" id="timeless-second-text">
+              Powered by the in-house Calibre AEON 60-P, delivering 28,800 vibrations per hour and a 72-hour power reserve, visible in high relief through the double sapphire crystal architecture.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 3: VERTICAL TEXT ================= -->
+      <section data-section="VerticalText">
+        <div class="fps-vertical-inner">
+          <div class="fps-left-infos-wrapper" data-fade>
+            <div class="fps-dial-icons-wrapper">
+              <svg width="32" height="32" viewBox="0 0 44 44" fill="none" stroke="currentColor">
+                <circle cx="22" cy="22" r="20" stroke-width="1.5" stroke-opacity="0.3"/>
+                <circle cx="22" cy="16" r="4" stroke-width="1.5"/>
+                <circle cx="22" cy="28" r="4" stroke-width="1.5"/>
+                <line x1="22" y1="2" x2="22" y2="42" stroke-dasharray="2 2" stroke-opacity="0.3"/>
+              </svg>
+            </div>
+
+            <div>
+              <p class="caption" id="vertical-first-label">Case & Finishes</p>
+              <h3 class="small-title">Hand-Polished Chamfers</h3>
+              <p class="body-text" id="vertical-first-text">
+                Crafted with meticulous attention to detail, the 60mm case alternates between hand-polished chamfers and satin-brushed flank surfaces, creating subtle reflections that sculpt light.
+              </p>
+            </div>
+
+            <div>
+              <p class="caption" id="vertical-second-label">Dial & Complications</p>
+              <h3 class="small-title">Tiered Guilloché Depth</h3>
+              <p class="body-text" id="vertical-second-text">
+                The dial reveals a multi-tiered architecture with Côtes de Genève micro-grooves, recessed chronograph counters, and faceted rhodium-plated indices that deliver exceptional legibility.
+              </p>
+            </div>
+          </div>
+
+          <div class="fps-right-infos-wrapper" data-fade>
+            <p>AEON</p>
+            <p><span></span>60P</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 4: CURVES (34 / 62) ================= -->
+      <section data-section="Curves">
+        <div class="fps-single-part-section-wrapper" data-fade>
+          <p class="fps-single-part-section-pretitle">34 / 62</p>
+          <h2 class="fps-single-part-section-title" id="curves-title">Elegant Contours</h2>
+          <p class="fps-single-part-section-text" id="curves-desc">
+            The subtly curved dial and beveled edges highlight master craftsmanship, creating a refined visual depth that embraces the wrist with balanced ergonomics.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 5: MOVEMENT (DARK THEME) ================= -->
+      <section data-section="Movement" class="big-text-section">
+        <div class="fps-movement-content">
+          the<br /><br>highly<br /><br>precise<br /><br>automatic<br /><br>movement
+        </div>
+
+        <div class="fps-timeless-wrapper" data-fade>
+          <p class="fps-watch-title grey-line">AEON 60P</p>
+        </div>
+
+        <div class="fps-timeless-informations-wrapper" data-fade>
+          <div>
+            <p class="caption" id="movement-first-label">Self-Winding System</p>
+            <h3 class="small-title">Kinetic Tungsten Rotor</h3>
+            <p class="body-text" id="movement-first-text">
+              A bidirectional tungsten oscillating weight captures kinetic energy from every wrist motion, transferring power effortlessly into the twin mainspring barrel.
+            </p>
+          </div>
+
+          <div>
+            <p class="caption" id="movement-second-label">Extreme Reliability</p>
+            <h3 class="small-title">38 Synthetic Rubies</h3>
+            <p class="body-text" id="movement-second-text">
+              Engineered with 38 synthetic ruby bearings and an anti-magnetic Glucydur balance spring to maintain chronometric certification under all conditions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 6: MOVEMENT WATCH RIGHT ================= -->
+      <section data-section="MovementWatchRight">
+        <div class="fps-vertical-inner">
+          <div class="fps-left-infos-wrapper" data-fade>
+            <div>
+              <p class="caption">Refined Dial</p>
+              <p class="body-text">A multi-layered architectural sunray dial engineered for instant readability, balanced symmetry, and timeless horological appeal.</p>
+            </div>
+
+            <div>
+              <p class="caption">Polished Hands</p>
+              <p class="body-text">Diamond-cut dauphine hands with Super-LumiNova luminescence glide with fluid continuous motion across the dial surface.</p>
+            </div>
+
+            <div>
+              <p class="caption">Premium Bezel</p>
+              <p class="body-text">A solid beveled bezel with micro-fluted rim adds structural depth, catching ambient light to accentuate the watch profile.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 7: MECHANISM ================= -->
+      <section data-section="Mechanism">
+        <div class="fps-mechanism-first">
+          <div class="fps-mechanism-first-inner" data-fade>
+            <h2 class="fps-mechanism-title">
+              <span>Mechanical</span><br />Heart
+            </h2>
+
+            <div>
+              <p class="caption">Automatic Calibre</p>
+              <h3 class="small-title">4 Hertz · 28,800 A/h</h3>
+              <p class="body-text">
+                The variable-inertia balance wheel regulates power flow with micro-second accuracy, animated by a Swiss lever escapement.
+              </p>
+            </div>
+
+            <div>
+              <p class="caption">Diameter</p>
+              <h3 class="small-title">60mm</h3>
+            </div>
+          </div>
+
+          <div class="fps-seconds-wrapper" data-fade>
+            <p><span id="sec-digit-1">0</span><span id="sec-digit-2">0</span>’</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 8: HANDS (35 / 62) ================= -->
+      <section data-section="Hands">
+        <div class="fps-single-part-section-wrapper" data-fade>
+          <p class="fps-single-part-section-pretitle">35 / 62</p>
+          <h2 class="fps-single-part-section-title" id="hands-title">Slim Profile</h2>
+          <p class="fps-single-part-section-text" id="hands-desc">
+            The lateral silhouette highlights the sleek proportions of the 60mm casing, engineered with recessed pushers and a knurled ergonomic crown.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 9: IMAGES (LOOKBOOK) ================= -->
+      <section data-section="Images" class="big-text-section">
+        <div class="fps-timeless-wrapper" data-fade>
+          <p class="fps-watch-title grey-line">EDITORIAL GALLERY</p>
+        </div>
+
+        <div class="images-w" data-cursor="drag">
+          <div class="single-img-w">
+            <img src="/aeon-60p-watch/images/lookbook_1.jpg" alt="Macro Dial Details" loading="lazy" />
+          </div>
+          <div class="single-img-w">
+            <img src="/aeon-60p-watch/images/lookbook_2.jpg" alt="Profile and Bevels" loading="lazy" />
+          </div>
+          <div class="single-img-w">
+            <img src="/aeon-60p-watch/images/lookbook_3.jpg" alt="Exhibition Caseback Movement" loading="lazy" />
+          </div>
+          <div class="single-img-w">
+            <img src="/aeon-60p-watch/images/lookbook_4.jpg" alt="Bespoke Wrist Presence" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 10: STRAPS (36 / 62) ================= -->
+      <section data-section="Straps">
+        <div class="fps-single-part-section-wrapper" data-fade>
+          <p class="fps-single-part-section-pretitle">36 / 62</p>
+          <h2 class="fps-single-part-section-title" id="straps-title">Integrated Bracelet</h2>
+          <p class="fps-single-part-section-text" id="straps-desc">
+            Forged from individual solid metal links with alternating satin and mirror finishes, secured by a seamless double-deployant butterfly clasp.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 11: PARTS (WEIGHT BREAKDOWN) ================= -->
+      <section data-section="Parts">
+        <div class="parts-top-w" data-fade>
+          <h3 class="parts-title">MODEL 146GR</h3>
+
+          <div class="parts-color-swatches">
+            <button class="parts-swatch-btn active" data-config="first" data-cursor="swap">Silver Steel</button>
+            <button class="parts-swatch-btn" data-config="second" data-cursor="swap">Deep Black</button>
+            <button class="parts-swatch-btn" data-config="third" data-cursor="swap">Pure Gold</button>
+            <button class="parts-swatch-btn" data-config="fourth" data-cursor="swap">Rose Gold</button>
+          </div>
+        </div>
+
+        <div class="parts-layout" data-fade>
+          <div class="parts-hero-img-w">
+            <img id="parts-hero-img" src="/aeon-60p-watch/images/parts_hero.jpg" alt="Watch Disassembled Components" />
+          </div>
+
+          <ul class="parts-table">
+            <li data-cursor="explore">
+              <span class="index">01</span>
+              <span class="name">Dial</span>
+              <span class="type">Mechanism</span>
+              <span class="weight">11 Gr</span>
+              <div class="bar-fill" style="width: 38%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">02</span>
+              <span class="name">Hands</span>
+              <span class="type">Mechanism</span>
+              <span class="weight">1 Gr</span>
+              <div class="bar-fill" style="width: 12%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">03</span>
+              <span class="name">Crystal</span>
+              <span class="type">Sapphire</span>
+              <span class="weight">12 Gr</span>
+              <div class="bar-fill" style="width: 42%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">04</span>
+              <span class="name">Bezel</span>
+              <span class="type">Case</span>
+              <span class="weight">16 Gr</span>
+              <div class="bar-fill" style="width: 55%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">05</span>
+              <span class="name">Lugs</span>
+              <span class="type">Case</span>
+              <span class="weight">18 Gr</span>
+              <div class="bar-fill" style="width: 62%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">06</span>
+              <span class="name">Strap</span>
+              <span class="type">Bracelet</span>
+              <span class="weight">34 Gr</span>
+              <div class="bar-fill" style="width: 100%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">07</span>
+              <span class="name">Buckle</span>
+              <span class="type">Clasp</span>
+              <span class="weight">8 Gr</span>
+              <div class="bar-fill" style="width: 28%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">08</span>
+              <span class="name">Crown</span>
+              <span class="type">Crown</span>
+              <span class="weight">3 Gr</span>
+              <div class="bar-fill" style="width: 18%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">09</span>
+              <span class="name">Caseback</span>
+              <span class="type">Case</span>
+              <span class="weight">14 Gr</span>
+              <div class="bar-fill" style="width: 48%;"></div>
+            </li>
+            <li data-cursor="explore">
+              <span class="index">10</span>
+              <span class="name">Movement</span>
+              <span class="type">Calibre</span>
+              <span class="weight">29 Gr</span>
+              <div class="bar-fill" style="width: 86%;"></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 13: FOOTER ================= -->
+      <section data-section="Footer">
+        <h2 class="footer-brand">AEON 60P</h2>
+
+        <div class="footer-bottom">
+          <p>© 2026 AEON ATELIER HORLOGER. GENEVA · PARIS · TOKYO</p>
+
+          <ul class="footer-links">
+            <li><a href="#" data-cursor="selectModel">SPECIFICATIONS</a></li>
+            <li><a href="#" data-cursor="selectModel">BESPOKE ATELIER</a></li>
+            <li><a href="#" data-cursor="selectModel">CARE & WARRANTY</a></li>
+            <li><a href="#" data-cursor="selectModel">CONCIERGE</a></li>
+          </ul>
+
+          <button id="back-to-top-btn" class="back-to-top-btn" data-cursor="swap">
+            <span>BACK TO TOP</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor">
+              <path d="M6 10V2M2 6l4-4 4 4" stroke-width="1.5"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= DISASSEMBLY / EXPLODED 3D VIEW OVERLAY ================= -->
+    <div id="disassembly-overlay" class="disassembly-overlay">
+      <div class="disassembly-header">
+        <h3 class="disassembly-title">EXPLODED 3D INSPECTION</h3>
+        <button id="close-disassembly-btn" class="close-disassembly-btn" data-cursor="swap">
+          <span>CLOSE [✕]</span>
+        </button>
+      </div>
+
+      <div class="disassembly-instructions">
+        <span>DRAG TO ROTATE 360° · USE ARROWS TO INSPECT INDIVIDUAL LAYERS</span>
+      </div>
+
+      <div id="disassembly-modal" class="disassembly-modal">
+        <p class="caption" id="modal-part-function">Chronometric Regulation</p>
+        <h3 class="small-title" id="modal-part-title">Tourbillon Escapement</h3>
+        <p class="body-text" id="modal-part-desc">
+          The rotating titanium cage compensates for positional gravity errors, housing the hairspring and balance wheel operating at 28,800 vibrations per hour.
+        </p>
+
+        <div class="modal-nav">
+          <button id="modal-prev-btn" class="modal-nav-btn" data-cursor="swap">← PREVIOUS</button>
+          <button id="modal-next-btn" class="modal-nav-btn" data-cursor="swap">NEXT →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN SCRIPT -->
+  </body>
+</html>
